@@ -28,8 +28,6 @@ jobs:
           package-name:
             odri_bolt_hardware
             odri_bolt_description
-          vcs-repo-file-url: |
-            https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/odri_bolt_robot.repos
           colcon-defaults: |
             {
               "build": {

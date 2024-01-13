@@ -33,7 +33,6 @@ jobs:
             odri_bolt_bringup
           vcs-repo-file-url: |
             https://raw.githubusercontent.com/ros2/ros2/rolling/ros2.repos
-            https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/odri_robot.repos
           colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
       - uses: actions/upload-artifact@v4.0.0
         with:
