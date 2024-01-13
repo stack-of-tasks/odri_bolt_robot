@@ -18,8 +18,8 @@ jobs:
         distribution: rolling
         linter: ${{ matrix.linter }}
         package-name:
-          bolt_description
-          bolt_bringup
+          odri_bolt_description
+          odri_bolt_bringup
 
   ament_lint_100:
     name: ament_${{ matrix.linter }}

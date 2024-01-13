@@ -26,8 +26,8 @@ jobs:
           target-ros2-distro: ${{ env.ROS_DISTRO }}
           # build all packages listed in the meta package
           package-name:
-            odri_bolt_hardware
             odri_bolt_description
+            odri_bolt_bringup
           colcon-defaults: |
             {
               "build": {
