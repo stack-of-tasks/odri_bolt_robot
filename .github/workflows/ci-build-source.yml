@@ -22,7 +22,7 @@ jobs:
           required-ros-distributions: rolling
       - uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.ref }}      
+          ref: ${{ inputs.ref }}
       - uses: ros-tooling/action-ros-ci@0.3.5
         with:
           target-ros2-distro:  rolling

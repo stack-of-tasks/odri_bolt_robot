@@ -36,6 +36,6 @@ jobs:
         distribution: rolling
         linter: cpplint
         arguments: "--linelength=100 --filter=-whitespace/newline"
-        package-name:/actions/runs/7504692249/job/20432321594
-          bolt_description
-          bolt_bringup
+        package_name:
+          odri_bolt_description
+          odri_bolt_bringup
