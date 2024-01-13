@@ -20,7 +20,7 @@ To move Bolt as you wish, you can use a `controller`. For this you will just nee
 
 - Move the robot to where you want it to go and press `Ctrl-C` to stop the file `demo_bolt_sensor_reading` running.
 
-- Copy the last value in your Terminal and paste it in the file [bolt_forward_position_publisher.yaml](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_bringup/config/bolt_forward_position_publisher.yaml), at `line 8`
+- Copy the last value in your Terminal and paste it in the file [bolt_forward_position_publisher.yaml](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/odri_bolt_bringup/config/bolt_forward_position_publisher.yaml), at `line 8`
 `pos1`
 
 - Repeat this as many times as you want , just pass the next position in the yaml file to pos2 etc...
@@ -41,7 +41,7 @@ When you have configured all the positions, you should run the new controller. :
 
 - Run in this terminal the `bolt_system_position_only` file (if you don't know how, follow the previous tutorial) :
 
-      ros2 launch ros2_control_bolt_bringup bolt_system_position_only.launch.py
+      ros2 launch odri_bolt_bringup bolt_system_position_only.launch.py
 
 - When it is running you have 2 ways to run the `bolt_forward_position_publisher` **controller** :
 
@@ -57,7 +57,7 @@ When you have configured all the positions, you should run the new controller. :
 
         - You just have to launch the file :
 
-                      ros2 launch ros2_control_bolt_bringup test_forward_position_controller.launch.py
+                      ros2 launch odri_bolt_bringup test_forward_position_controller.launch.py
 
           **Now you can see bolt going to every point you gave it.**
 
@@ -98,7 +98,7 @@ When you have configured all the positions, you should run the new controller. :
 
       - Now that the controller is active, you can launch it :
 
-              ros2 launch ros2_control_bolt_bringup test_forward_position_controller.launch.py
+              ros2 launch odri_bolt_bringup test_forward_position_controller.launch.py
 
      Now you can see the bolt go to each point you gave it.
 

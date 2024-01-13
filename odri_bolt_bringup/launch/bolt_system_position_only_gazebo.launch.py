@@ -10,7 +10,7 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
 
     arg_world_filename = PathJoinSubstitution(
-        [FindPackageShare("ros2_control_bolt_bringup"), "world", "bolt_world.world"]
+        [FindPackageShare("odri_bolt_bringup"), "world", "bolt_world.world"]
     )
 
     gazebo = IncludeLaunchDescription(
@@ -31,7 +31,7 @@ def generate_launch_description():
             " ",
             PathJoinSubstitution(
                 [
-                    FindPackageShare("ros2_description_bolt"),
+                    FindPackageShare("odri_bolt_description"),
                     "urdf",
                     "system_bolt_description.urdf.xacro",
                 ]

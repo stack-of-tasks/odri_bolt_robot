@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(ros2_description_bolt)
+project(odri_bolt_description)
 
 find_package(ament_cmake REQUIRED)
 

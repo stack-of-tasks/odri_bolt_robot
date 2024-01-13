@@ -1,22 +1,21 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>ros2_control_bolt</name>
+  <name>odri_bolt_robot</name>
   <version>0.0.0</version>
   <description>Metapackage for `ros2_control` demos packages</description>
 
-  <author email="prouanet@laas.fr">Paul Rouanet</author>
+  <author email="olivier.stasse@laas.fr">Olivier Stasse</author>
 
-  <maintainer email="prouanet@laas.fr">Paul Rouanet</maintainer>
+  <maintainer email="olivier.stasse@laas.fr">Olivier Stasse</maintainer>
 
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <exec_depend>ros2_control_bolt_bringup</exec_depend>
-  <exec_depend>ros2_description_bolt</exec_depend>
+  <exec_depend>odri_bolt_bringup</exec_depend>
+  <exec_depend>odri_bolt_description</exec_depend>
   <exec_depend>ros2_hardware_interface_odri</exec_depend>
   <exec_depend>ros2_control_test_nodes</exec_depend>
-  <exec_depend>gazebo_ros2_control_bolt</exec_depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
