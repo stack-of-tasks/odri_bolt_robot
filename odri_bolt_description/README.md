@@ -1,7 +1,7 @@
-# ros2_control_bolt
+# odri_bolt_description
 ----------------------
 
-Author : Paul Rouanet
+Author : Paul Rouanet / Olivier Stasse
 
 ### What it is
 
