@@ -2,7 +2,7 @@
 <package format="3">
   <name>odri_bolt_robot</name>
   <version>0.0.0</version>
-  <description>Metapackage for `ros2_control` demos packages</description>
+  <description>Metapackage for the ODRI Bolt robot on ROS-2</description>
 
   <author email="olivier.stasse@laas.fr">Olivier Stasse</author>
 
