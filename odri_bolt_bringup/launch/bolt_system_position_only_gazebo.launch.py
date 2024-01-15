@@ -8,7 +8,6 @@ from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-
     arg_world_filename = PathJoinSubstitution(
         [FindPackageShare("odri_bolt_bringup"), "world", "bolt_world.world"]
     )
