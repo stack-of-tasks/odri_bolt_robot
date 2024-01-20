@@ -37,13 +37,13 @@ You may need to setup 2 things to run a launch file :
 
     When you run a launch file with a node in sudo (in real time), the sudo user and your user can't talk to each other. To resolve this problem, you have to add a file inside your directory.
 
-    Don't panic, the file is already add in the bolt directory [FastRTPS.xml](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/ros2_description_bolt/config/FastRTPS.xml). But you have to call him every time you run a launch file, for that add this command in your `bashrc` :
+    Don't panic, the file is already add in the bolt directory [FastRTPS.xml](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/odri_bolt_description/config/FastRTPS.xml). But you have to call him every time you run a launch file, for that add this command in your `bashrc` :
 
-		    export FASTRTPS_DEFAULT_PROFILES_FILE=<PATH_TO_THE_FILE>
+            export FASTRTPS_DEFAULT_PROFILES_FILE=<PATH_TO_THE_FILE>
 
     Where `<PATH_TO_THE_FILE>` is your path to the file `FasrRTPS.xml` from the root `"cd /"`. For example for bolt the right command is :
 
-    		export FASTRTPS_DEFAULT_PROFILES_FILE=users/local/<User_Name>/Bolt_ws/src/ros2_control_bolt/ros2_description_bolt/config/FastRTPS.xml
+            export FASTRTPS_DEFAULT_PROFILES_FILE=users/local/<User_Name>/Bolt_ws/src/odri_bolt_robot/odri_bolt_description/config/FastRTPS.xml
 
     **After that, you know every thing, and you have set every thing to run your first launch file.**
 
@@ -82,13 +82,13 @@ Now you can really play with Bolt, if you have followed correctly each tutorial 
 
         you will see that list :
 
-	![Topic List](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/ros2_control_bolt_tuto/pictures/Launch_Bolt_1-R.png?raw=true "Topic List")
+	![Topic List](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Launch_Bolt_1-R.png?raw=true "Topic List")
 
     -  run the topic `/joint_states` :
 
 			ros2 topic echo /joint_states
 
-	![/join_states](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/ros2_control_bolt_tuto/pictures/Launch_Bolt_2-R.png?raw=true "/join_states")
+	![/join_states](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Launch_Bolt_2-R.png?raw=true "/join_states")
 
 	**You can see all the parameters of Bolt in real time !**
 

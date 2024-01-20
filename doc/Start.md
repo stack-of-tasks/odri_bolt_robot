@@ -53,7 +53,7 @@ You need to have a `clear workspace` to do some tests or find your files easily.
 
    You need to have `git tool install`
 
-        git clone --recursive https://github.com/stack-of-tasks/ros2_control_bolt.git
+        git clone --recursive https://github.com/stack-of-tasks/odri_bolt_robot.git
 
 5) Add some `dependencies` of Bolt (in the src file) :
 
@@ -82,13 +82,13 @@ Every time you change something in your code you need to upload with a `colcon b
 
 4) If everything install properly you must come to this end when you do your `first colcon build` :
 
-![Colcon Build](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Start_Bolt_1-R.png?raw=true "Colcon Build")
+![Colcon Build](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Start_Bolt_1-R.png?raw=true "Colcon Build")
 
 5) To only `update a part` of your code you changed, you can do this :
 
-        colcon build --packages-select ros2_description_bolt
+        colcon build --packages-select odri_bolt_description
 
-    This example is only here for updating the package ros2_description_bolt
+    This example is only here for updating the package odri_bolt_description
 
 
 **Now you have all you need for the project and you know how to do Colcon Build**

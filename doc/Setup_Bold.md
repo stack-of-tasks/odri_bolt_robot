@@ -31,24 +31,24 @@
 
 2) Take your `power supply`, turn it on and adjust behind the power supply the port (P1/P2/P3) and set the mode to `SET` then set the voltage to `20V` and the amperage to `5A` on the front. Finally, set the mode to `NORMAL`.
 
-![Behind alimentation](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Setup_Bolt_1-R.jpeg?raw=true "Behind alimentation")
+![Behind alimentation](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Setup_Bolt_1-R.jpeg?raw=true "Behind alimentation")
 
 3) Connect the `emergency stop button` to the `power supply` (from behind,and not in front) :
 
-    ![Not Front](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Setup_Bolt_2-R.jpeg?raw=true "Not Front")
-    ![Behind](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Setup_Bolt_3-R.jpeg?raw=true "Behind")
+    ![Not Front](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Setup_Bolt_2-R.jpeg?raw=true "Not Front")
+    ![Behind](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Setup_Bolt_3-R.jpeg?raw=true "Behind")
 
 4) Connect the other end of the `emergency button` to the robot and the `Ethernet cable` to your computer.
 
-     ![Button Connection](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Setup_Bolt_7-R.jpeg?raw=true "Buttun Connection")
+     ![Button Connection](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Setup_Bolt_7-R.jpeg?raw=true "Buttun Connection")
 
 5) Connect the `power cable` to `Bolt`, one end to the Ethernet port of the `Master-Board` and the `power cable inside Bolt`.
 
-    ![Bolt Connection](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Setup_Bolt_4-R.jpeg?raw=true "Connection")
+    ![Bolt Connection](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Setup_Bolt_4-R.jpeg?raw=true "Connection")
 
 6) Check if any cable is `plugged out` of the `Master-Board` (below Bolt).
 
-    ![Connection Master-Board](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Setup_Bolt_5-R.jpeg?raw=true "Master-Board Connection")
+    ![Connection Master-Board](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Setup_Bolt_5-R.jpeg?raw=true "Master-Board Connection")
 
 7) Finally, `unlock the emergency stop button` and `power on` the `supply power`.
 
@@ -82,7 +82,7 @@
 
       - Copy and paste the right port in the file :
 
-             Bolt_ws/src/ros2_control_bolt/ros2_description_bolt/config/bolt_config.yaml
+             Bolt_ws/src/odri_bolt_robot/odri_bolt_description/config/bolt_config.yaml
         at :
 
               interface : <PORT>     (line 4)

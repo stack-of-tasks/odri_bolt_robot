@@ -34,16 +34,16 @@ For this step, you must have configured all the parameters mentioned in the prev
 
 4)  Place the calibration object on Bolt while the simulation is running.
 
-    ![Bolt With Object](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Calibration_Bolt_1-R.jpeg?raw=true "Bolt with object")
-    ![Bolt With Object](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Calibration_Bolt_2-R.jpeg?raw=true "Bolt with object")
+    ![Bolt With Object](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Calibration_Bolt_1-R.jpeg?raw=true "Bolt with object")
+    ![Bolt With Object](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Calibration_Bolt_2-R.jpeg?raw=true "Bolt with object")
 
 5) When the object is placed, press `Ctrl + C` to stop the simulation and take one of the latest return values.
 
-    ![Bolt Calibration Values](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Calibration_Bolt_3-R.jpeg.png?raw=true "Bolt Calibration Values")
+    ![Bolt Calibration Values](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Calibration_Bolt_3-R.jpeg.png?raw=true "Bolt Calibration Values")
 
-6)  Open file `ros2_control_bolt/ros2_description_bolt/src/bolt_config.yaml` and paste the values in the variable **position_offsets (line 30)**, save the file and do a colcon build at `Bolt_ws/`.
+6)  Open file `odri_bolt_robot/odri_bolt_description/src/bolt_config.yaml` and paste the values in the variable **position_offsets (line 30)**, save the file and do a colcon build at `Bolt_ws/`.
 
-    ![Offset Change](https://github.com/Benjamin-Amsellem/ros2_control_bolt/blob/master/ros2_control_bolt_tuto/pictures/Calibration_Bolt_4-R.png?raw=true "Offset Change")
+    ![Offset Change](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Calibration_Bolt_4-R.png?raw=true "Offset Change")
 
 
 7)  If you want to change the way each motor finds its Index, go to line 26 at Search_methods  and change it as you wish (by default, everything is set to POS):
