@@ -11,11 +11,11 @@ After you've followed all previous tutorials, you have the required knowledge  t
 
 Launch files are code in python, we make them to creating `commands lines` and `launch some nodes`. They are really useful because when we run them we can run a lot of nodes and commands lines at the same time.
 
-All the launch files can be found in the [odri_bolt_bringup](https://github.com/stack-of-tasks/odri_bolt_robot/tree/master/odri_bolt_bringup), we can run them separately. For example, we will see the file [bolt_system_position_only.launch.py](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/odri_bolt_bringup/launch/bolt_system_position_only.launch.py):
+All the launch files can be found in the [odri_bolt_bringup](https://github.com/stack-of-tasks/odri_bolt_robot/tree/main/odri_bolt_bringup), we can run them separately. For example, we will see the file [bolt_system_position_only.launch.py](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/odri_bolt_bringup/launch/bolt_system_position_only.launch.py):
 
 When you start a launch file you need to `declare the description` of your launch and inside you declare every argument you need.
 After having declared every argument, you `initialize` them with what you  want to do.
-At the end, you `launch your argument`, then you run another launch file call [bolt.launch.py](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/odri_bolt_bringup/launch/bolt.launch.py). And in this launch you’ll see the same structure and at the end you run 5 different `Nodes` and run some `commands`.
+At the end, you `launch your argument`, then you run another launch file call [bolt.launch.py](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/odri_bolt_bringup/launch/bolt.launch.py). And in this launch you’ll see the same structure and at the end you run 5 different `Nodes` and run some `commands`.
 
 If you need to launch a `real time node`, you must call them as a `Owner user` with the `sudo` command.
 
@@ -37,7 +37,7 @@ You may need to setup 2 things to run a launch file :
 
     When you run a launch file with a node in sudo (in real time), the sudo user and your user can't talk to each other. To resolve this problem, you have to add a file inside your directory.
 
-    Don't panic, the file is already add in the bolt directory [FastRTPS.xml](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/odri_bolt_description/config/FastRTPS.xml). But you have to call him every time you run a launch file, for that add this command in your `bashrc` :
+    Don't panic, the file is already add in the bolt directory [FastRTPS.xml](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/odri_bolt_description/config/FastRTPS.xml). But you have to call him every time you run a launch file, for that add this command in your `bashrc` :
 
             export FASTRTPS_DEFAULT_PROFILES_FILE=<PATH_TO_THE_FILE>
 
@@ -82,13 +82,13 @@ Now you can really play with Bolt, if you have followed correctly each tutorial 
 
         you will see that list :
 
-	![Topic List](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Launch_Bolt_1-R.png?raw=true "Topic List")
+	![Topic List](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/doc/pictures/Launch_Bolt_1-R.png?raw=true "Topic List")
 
     -  run the topic `/joint_states` :
 
 			ros2 topic echo /joint_states
 
-	![/join_states](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Launch_Bolt_2-R.png?raw=true "/join_states")
+	![/join_states](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/doc/pictures/Launch_Bolt_2-R.png?raw=true "/join_states")
 
 	**You can see all the parameters of Bolt in real time !**
 

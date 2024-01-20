@@ -8,7 +8,7 @@ After you've followed all previous tutorials, you have all the knowledge require
 ## Set the positions
 
 
-To move Bolt as you wish, you can use a `controller`. For this you will just need a few points from each joint. To find the points you want to send to Bolt, you can use the file [demo_bolt_sensor_reading.cpp](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/ros2_hardware_interface_bolt/test/demo_bolt_sensor_reading.cpp):
+To move Bolt as you wish, you can use a `controller`. For this you will just need a few points from each joint. To find the points you want to send to Bolt, you can use the file [demo_bolt_sensor_reading.cpp](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/ros2_hardware_interface_bolt/test/demo_bolt_sensor_reading.cpp):
 
 - Open a Terminal and source Bolt :
 
@@ -20,7 +20,7 @@ To move Bolt as you wish, you can use a `controller`. For this you will just nee
 
 - Move the robot to where you want it to go and press `Ctrl-C` to stop the file `demo_bolt_sensor_reading` running.
 
-- Copy the last value in your Terminal and paste it in the file [bolt_forward_position_publisher.yaml](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/odri_bolt_bringup/config/bolt_forward_position_publisher.yaml), at `line 8`
+- Copy the last value in your Terminal and paste it in the file [bolt_forward_position_publisher.yaml](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/odri_bolt_bringup/config/bolt_forward_position_publisher.yaml), at `line 8`
 `pos1`
 
 - Repeat this as many times as you want , just pass the next position in the yaml file to pos2 etc...

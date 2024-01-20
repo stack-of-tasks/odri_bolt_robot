@@ -82,7 +82,7 @@ Every time you change something in your code you need to upload with a `colcon b
 
 4) If everything install properly you must come to this end when you do your `first colcon build` :
 
-![Colcon Build](https://github.com/stack-of-tasks/odri_bolt_robot/blob/master/doc/pictures/Start_Bolt_1-R.png?raw=true "Colcon Build")
+![Colcon Build](https://github.com/stack-of-tasks/odri_bolt_robot/blob/main/doc/pictures/Start_Bolt_1-R.png?raw=true "Colcon Build")
 
 5) To only `update a part` of your code you changed, you can do this :
 
