@@ -16,7 +16,7 @@
   <exec_depend>joint_trajectory_controller</exec_depend>
   <exec_depend>joint_state_publisher_gui</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
-  <exec_depend>ros2_description_bolt</exec_depend>
+  <exec_depend>odri_bolt_description</exec_depend>
   <exec_depend>ros2_controllers_test_nodes</exec_depend>
   <exec_depend>rviz2</exec_depend>
   <exec_depend>xacro</exec_depend>

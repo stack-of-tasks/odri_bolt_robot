@@ -28,11 +28,11 @@ https://github.com/open-dynamic-robot-initiative/robot_properties_bolt/blob/mast
   <!--If we use Gazebo-->
   <xacro:if value="$(arg use_sim)">
     <xacro:if value="$(arg use_crane)">
-      <xacro:include filename="$(find ros2_description_bolt)/urdf/crane.urdf.xacro" />
+      <xacro:include filename="$(find odri_bolt_description)/urdf/crane.urdf.xacro" />
     </xacro:if>
   </xacro:if>
 
-  <xacro:include filename="$(find ros2_description_bolt)/ros2_control/system_bolt.ros2_control.xacro" />
+  <xacro:include filename="$(find odri_bolt_description)/ros2_control/system_bolt.ros2_control.xacro" />
 
   <!-- ros_control plugin for Gazebo -->
   <xacro:if value="$(arg use_sim)">
