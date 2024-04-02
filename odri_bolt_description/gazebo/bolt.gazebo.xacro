@@ -66,5 +66,5 @@ on/urdf/rrbot.gazebo
     </gazebo>
 
   </xacro:macro>
-  
+
 </robot>

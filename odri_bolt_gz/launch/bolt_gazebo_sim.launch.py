@@ -22,7 +22,6 @@ from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-
     # Declare arguments
     declared_arguments = []
     declared_arguments.append(
@@ -42,7 +41,11 @@ def generate_launch_description():
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
             PathJoinSubstitution(
-                [FindPackageShare("odri_bolt_description"), "urdf", "system_bolt_description.urdf.xacro"]
+                [
+                    FindPackageShare("odri_bolt_description"),
+                    "urdf",
+                    "system_bolt_description.urdf.xacro",
+                ]
             ),
             " ",
             "use_gazebo_sim:=true",
