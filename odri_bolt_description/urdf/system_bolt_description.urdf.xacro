@@ -19,14 +19,15 @@ https://github.com/open-dynamic-robot-initiative/robot_properties_bolt/blob/mast
   <xacro:property name="has_passive_ankle" value="false" />
   <xacro:arg name="prefix" default="" />
   <xacro:arg name="use_crane" default="true" />
-  <xacro:arg name="use_sim" default="false" />
+  <xacro:arg name="use_gazebo_sim" default="false" />
   <xacro:arg name="use_fake_hardware" default="false" />
 
   <!-- Include the legs -->
   <xacro:include filename="system_bolt.urdf.xacro"/>
 
   <!--If we use Gazebo-->
-  <xacro:if value="$(arg use_sim)">
+  <xacro:if value="$(arg use_gazebo_sim)">
+    <xacro:include filename="$(find odri_bolt_description)/gazebo/bolt.gazebo.xacro" />
     <xacro:if value="$(arg use_crane)">
       <xacro:include filename="$(find odri_bolt_description)/urdf/crane.urdf.xacro" />
     </xacro:if>
@@ -34,16 +35,8 @@ https://github.com/open-dynamic-robot-initiative/robot_properties_bolt/blob/mast
 
   <xacro:include filename="$(find odri_bolt_description)/ros2_control/system_bolt.ros2_control.xacro" />
 
-  <!-- ros_control plugin for Gazebo -->
-  <xacro:if value="$(arg use_sim)">
-    <gazebo>
-      <plugin name="gazebo_ros2_bolt" filename="libgazebo_ros2_control_bolt.so">
-	<parameters>$(find gazebo_ros2_control_bolt)/config/bolt_gazebo_config_controller.yaml</parameters>
-      </plugin>
-    </gazebo>
-  </xacro:if>
 
-  <xacro:if value="$(arg use_sim)">
+  <xacro:if value="$(arg use_gazebo_sim)">
     <xacro:if value="$(arg use_crane)">
       <xacro:crane parent="base_link" />
     </xacro:if>
@@ -62,5 +55,12 @@ https://github.com/open-dynamic-robot-initiative/robot_properties_bolt/blob/mast
   <xacro:system_bolt_ros2_control
     name="SystemBoltRos2Control" prefix="$(arg prefix)" use_fake_hardware="$(arg use_fake_hardware)"
       use_sim="$(arg use_sim)"/>
+
+    <!-- ros_control plugin for Gazebo -->
+    <xacro:if value="$(arg use_gazebo_sim)">
+      <xacro:odri_bolt_gazebo
+          name="OdriBoltGazeboRos2Control" prefix="$(arg prefix)"
+          />
+  </xacro:if>
 
 </robot>

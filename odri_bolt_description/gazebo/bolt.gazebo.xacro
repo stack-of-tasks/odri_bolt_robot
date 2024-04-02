@@ -1,0 +1,70 @@
+<!--
+Copied and modified from ROS1 example -
+https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_descripti
+on/urdf/rrbot.gazebo
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="odri_bolt_gazebo" params="prefix">
+    <!-- ros2_control GZ Sim plugin -->
+    <gazebo reference="world">
+    </gazebo>
+
+    <gazebo>
+      <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="gz_ros2_control-system">
+	<parameters>$(find gazebo_ros2_control_bolt)/config/bolt_gazebo_config_controller.yaml</parameters>
+        <controller_manager_node_name>${prefix}controller_manager</controller_manager_node_name>
+      </plugin>
+    </gazebo>
+
+    <gazebo reference="right_SHOULDER">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="right_UPPER_LEG">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="right_LOWER_LEG">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="right_FOOT">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="left_SHOULDER">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="left_UPPER_LEG">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="left_LOWER_LEG">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="left_FOOT">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+  </xacro:macro>
+  
+</robot>
