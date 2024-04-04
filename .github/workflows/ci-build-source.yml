@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - main
-  schedule:
-    # Run every day to detect flakiness and broken dependencies
-    - cron: '43 1 * * *'
 
 jobs:
   source:
