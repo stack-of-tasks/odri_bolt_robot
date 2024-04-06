@@ -15,7 +15,7 @@
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>rviz2</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
-  <exec_depend>gz_ros2_control</exec_depend>
+  <exec_depend>gz_ros2_control_odri</exec_depend>
   <exec_depend>odri_bolt_description</exec_depend>
 
   <export>
