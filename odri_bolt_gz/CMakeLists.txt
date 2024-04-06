@@ -7,7 +7,7 @@ foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
 endforeach()
 
 install(
-  DIRECTORY launch worlds
+  DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
 )
 

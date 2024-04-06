@@ -61,14 +61,11 @@ def generate_launch_description():
     )
 
     # Start Gazebo
-    gazebo_world = PathJoinSubstitution(
-        [FindPackageShare("odri_bolt_gz"), "worlds", "empty.world"]
-    )
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [PathJoinSubstitution([FindPackageShare("ros_gz_sim"), "launch", "gz_sim.launch.py"])]
         ),
-        launch_arguments=[("gz_args", [" -r -v 4 ", gazebo_world])],
+        launch_arguments=[("gz_args", [" -r -v 4 empty.sdf"])],
     )
 
     spawn_entity = Node(

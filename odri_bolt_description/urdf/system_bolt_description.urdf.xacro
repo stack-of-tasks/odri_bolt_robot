@@ -54,13 +54,11 @@ https://github.com/open-dynamic-robot-initiative/robot_properties_bolt/blob/mast
 
   <xacro:system_bolt_ros2_control
     name="SystemBoltRos2Control" prefix="$(arg prefix)" use_fake_hardware="$(arg use_fake_hardware)"
-      use_sim="$(arg use_sim)"/>
+      use_gazebo_sim="$(arg use_gazebo_sim)"/>
 
-    <!-- ros_control plugin for Gazebo -->
-    <xacro:if value="$(arg use_gazebo_sim)">
-      <xacro:odri_bolt_gazebo
-          name="OdriBoltGazeboRos2Control" prefix="$(arg prefix)"
-          />
+  <!-- ros_control plugin for Gazebo -->
+  <xacro:if value="$(arg use_gazebo_sim)">
+    <xacro:odri_bolt_gazebo prefix="$(arg prefix)" />
   </xacro:if>
 
 </robot>
