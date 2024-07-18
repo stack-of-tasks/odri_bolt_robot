@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from ament_index_python.packages import get_package_share_directory
+import os.path
+
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.conditions import IfCondition
@@ -61,11 +64,21 @@ def generate_launch_description():
     )
 
     # Start Gazebo
+
+    pth_odri_bgz_world = os.path.join(get_package_share_directory('odri_bolt_gz'),
+                                     'world',
+                                     'CloseView.sdf')
+    pth_odri_bgz_user_cfg = os.path.join(get_package_share_directory('odri_bolt_gz'),
+                                     'config',
+                                     'view_bolt.config')
+
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [PathJoinSubstitution([FindPackageShare("ros_gz_sim"), "launch", "gz_sim.launch.py"])]
         ),
-        launch_arguments=[("gz_args", [" -r -v 4 empty.sdf"])],
+        launch_arguments=[("gz_args", [" -r -v 4 " + pth_odri_bgz_world
+                                       + " --gui-config "
+                                       + pth_odri_bgz_user_cfg])],
     )
 
     spawn_entity = Node(

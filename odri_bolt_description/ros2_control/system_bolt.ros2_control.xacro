@@ -7,7 +7,7 @@
 
       <xacro:if value="$(arg use_gazebo_sim)">
         <hardware>
-          <plugin>gz_ros2_control/GazeboOdriSimSystem</plugin>
+          <plugin>odri_gz_ros2_control/GazeboOdriSimSystem</plugin>
 	  <param name="default_kp">1000.0</param>
 	  <param name="default_kd">10.0</param>
         </hardware>
