@@ -20,4 +20,3 @@ jobs:
         package-name:
           odri_bolt_description
           odri_bolt_bringup
-
