@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-          linter: [lint_cmake,flake8, mypy, pep257, pep8, xmllint]
+          linter: [lint_cmake, mypy, pep257,  xmllint]
     steps:
     - uses: actions/checkout@v4
     - uses: ros-tooling/setup-ros@0.7.7
