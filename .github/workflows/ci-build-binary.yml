@@ -19,6 +19,9 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: stack-of-tasks/ros2_hardware_interface_odri
+      - name: Check out ros2_hardware_interface_odri
+        uses: actions/checkout@master
+        with:          
           repository: stack-of-tasks/odri_gz_ros2_control
       - uses: actions/checkout@v3
       - uses: 'ros-industrial/industrial_ci@master'
