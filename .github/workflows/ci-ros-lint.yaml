@@ -9,33 +9,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-          linter: [copyright, cppcheck, lint_cmake]
+          linter: [lint_cmake, mypy, pep257,  xmllint]
     steps:
-    - uses: actions/checkout@v1
-    - uses: ros-tooling/setup-ros@v0.7.1
+    - uses: actions/checkout@v4
+    - uses: ros-tooling/setup-ros@0.7.7
     - uses: ros-tooling/action-ros-lint@v0.1
       with:
         distribution: rolling
         linter: ${{ matrix.linter }}
         package-name:
-          odri_bolt_description
-          odri_bolt_bringup
-
-  ament_lint_100:
-    name: ament_${{ matrix.linter }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-          linter: [cpplint]
-    steps:
-    - uses: actions/checkout@v4
-    - uses: ros-tooling/setup-ros@v0.7.1
-    - uses: ros-tooling/action-ros-lint@v0.1
-      with:
-        distribution: rolling
-        linter: cpplint
-        arguments: "--linelength=100 --filter=-whitespace/newline"
-        package_name:
           odri_bolt_description
           odri_bolt_bringup
