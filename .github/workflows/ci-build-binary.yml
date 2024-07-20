@@ -15,18 +15,15 @@ jobs:
           - {ROS_DISTRO: rolling, ROS_REPO: main}
           - {ROS_DISTRO: rolling, ROS_REPO: testing}
     steps:
-      - name: Check out ros2_hardware_interface_odri
-        uses: actions/checkout@master
+      - uses: actions/checkout@v3
+        name: Checkout out main repository
+      - uses: actions/checkout@v3
+        name: Checkout out
         with:
           repository: stack-of-tasks/ros2_hardware_interface_odri
-      - uses: 'ros-industrial/industrial_ci@master'
-        env: ${{matrix.env}}
-      - name: Check out odri_gz_ros2_control
-        uses: actions/checkout@master
+      - uses: actions/checkout@v3
+        name: Checkout out
         with:
           repository: stack-of-tasks/odri_gz_ros2_control
-      - uses: 'ros-industrial/industrial_ci@master'
-        env: ${{matrix.env}}
-      - uses: actions/checkout@v3
       - uses: 'ros-industrial/industrial_ci@master'
         env: ${{matrix.env}}
